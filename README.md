@@ -11,7 +11,7 @@ Este componente va albergar la estructura de una tarjeta o carta con el personaj
 
 Asegúrate que puedes crear la misma carta en tu App.vue varias veces.
 
-## Iteración 2 - Componente Card dinámico
+## Iteración 2 - Componente Card 
 
 Modifica el componente `Card.vue` para poder establecer las siguientes propiedades
 
@@ -26,72 +26,6 @@ O si lo prefieres, puedes hacer una versión con fotos imágenes de pokemon: htt
 ## Iteración 3 - Iterar Array de personas
 
 Ahora, queremos usar v-for para generar tantas Card como elementos hay en un array.
-Dado el array 
-
-```
-const people = [
-    {
-      name: { title: 'Mr', first: 'Karl', last: 'Johnson' },        
-      gender: 'male',
-      picture: 'https://randomuser.me/api/portraits/med/men/6.jpg', 
-      id: '11122222'
-    },
-    {
-      name: { title: 'Mr', first: 'Jezdimir', last: 'Popović' },    
-      gender: 'male',
-      picture: 'https://randomuser.me/api/portraits/med/men/64.jpg',
-      id: '458558716'
-    },
-    {
-      name: { title: 'Mrs', first: 'Elli', last: 'Hatala' },        
-      gender: 'female',
-      picture: 'https://randomuser.me/api/portraits/med/women/55.jpg',
-      id: '458558799'
-    },
-    {
-      name: { title: 'Ms', first: 'Deniz', last: 'Topçuoğlu' },
-      gender: 'female',
-      picture: 'https://randomuser.me/api/portraits/med/women/64.jpg',
-      id: '45677777'
-    },
-    {
-      name: { title: 'Madame', first: 'Margot', last: 'Roche' },
-      gender: 'female',
-      picture: 'https://randomuser.me/api/portraits/med/women/21.jpg',
-      id: '48888999'
-    },
-    {
-      name: { title: 'Mrs', first: 'Potishana', last: 'Buryak' },
-      gender: 'female',
-      picture: 'https://randomuser.me/api/portraits/med/women/88.jpg',
-      id: '1234343243'
-    },
-    {
-      name: { title: 'Mr', first: 'Çetin', last: 'Çağıran' },
-      gender: 'male',
-      picture: 'https://randomuser.me/api/portraits/med/men/69.jpg',
-      id: '00324324324'
-    },
-    {
-      name: { title: 'Mr', first: 'Peter', last: 'Thompson' },
-      gender: 'male',
-      picture: 'https://randomuser.me/api/portraits/med/men/25.jpg',
-      id: '173-60-0652'
-    },
-    {
-      name: { title: 'Ms', first: 'Caitlin', last: 'Garrett' },
-      gender: 'female',
-      picture: 'https://randomuser.me/api/portraits/med/women/60.jpg',
-      id: '0594407T'
-    },
-    {
-      name: { title: 'Ms', first: 'Radomira', last: 'Manuylenko' },
-      gender: 'female',
-      picture: 'https://randomuser.me/api/portraits/med/women/29.jpg',
-      id: '3434234Y'
-    }
-  ]
-```
 
 1. Coloca todos estos objetos en una variable de estado en **App.vue**. Dicha variable podría llamarse _people_
 2. Usa adecuadamente v-for para generar tantos Card como elementos hay en el array
