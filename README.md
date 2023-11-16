@@ -3,6 +3,8 @@
 Vamos a implementar el juego quien es quien con Vue.
 ![Guess Who](https://m.media-amazon.com/images/I/A10mO0i6UmL.jpg)
 
+[DEMO - sin estilos](https://vue-guess-who.vercel.app/)
+
 ## Iteración 1 - Componente Card estático
 
 Crea un componente carta en la carpeta `components`, de nombre `Card.vue`.
