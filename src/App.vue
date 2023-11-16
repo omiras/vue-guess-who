@@ -1,42 +1,39 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+
+import { ref } from "vue"
+
+import people from './assets/people.json'
+import Card from './components/Card.vue';
+
+const allPeople = ref(people)
+
+const removePicture = (event) => {
+  console.log("🚀 ~ file: App.vue:7 ~ constremovePicture ~ event:", event.currentTarget.id)
+  allPeople.value = allPeople.value.filter(p => p.id != event.currentTarget.id)
+
+}
+
 </script>
 
 <template>
   <header>
-
+    <h1>Guess Who?</h1>
   </header>
 
-  <main>
+  <main v-if="allPeople.length != 1">
+    <Card @dblclick="removePicture($event)" v-for="p in allPeople" :key="p.id" :id="p.id" :name="p.name.first"
+      :picture="p.picture" />
   </main>
+  <section v-else>
+    <h3>¿El sospechoso/a era <span style="color:green">{{ allPeople[0].name.first }} <img :src="allPeople[0].picture"
+          alt=""></span>?</h3>
+  </section>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 </style>
