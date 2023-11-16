@@ -8,7 +8,7 @@ import Card from './components/Card.vue';
 const allPeople = ref(people)
 
 const removePicture = (event) => {
-  console.log("🚀 ~ file: App.vue:7 ~ constremovePicture ~ event:", event.currentTarget.id)
+  console.log("🚀 ~ file: App.vue:7 ~ constremovePicture ~ event: ", event.currentTarget.id)
   allPeople.value = allPeople.value.filter(p => p.id != event.currentTarget.id)
 
 }
